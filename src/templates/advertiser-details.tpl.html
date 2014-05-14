@@ -1,0 +1,57 @@
+<div ng-controller="advertiserDetailsCtrl">
+    <div class="alert alert-success" ng-show="status == 'success'">{{confirmationMessage}}<span class="pull-right glyphicon glyphicon-ok" ng-click="removeConfirmation()"></span></div>
+    <div class="alert alert-danger" ng-show="status == 'error'">{{confirmationMessage}}<span class="pull-right glyphicon glyphicon-remove" ng-click="removeConfirmation()"></span></div>
+        <div class="col-sm-6">
+            <h4>Advertiser Details</h4>
+            <br/>
+            <div class="input-group">
+                <span class="input-group-addon">Name</span>
+                <input type="text" class="form-control" ng-model="advertiser.name" ng-disabled="!editMode">
+            </div>
+            <br/>
+            <div class="input-group">
+                <span class="input-group-addon">City</span>
+                <input type="text" class="form-control" ng-model="advertiser.city" ng-disabled="!editMode">
+            </div>
+            <br/>
+            <div class="input-group">
+                <span class="input-group-addon">Address</span>
+                <input type="text" class="form-control" ng-model="advertiser.address" ng-disabled="!editMode">
+            </div>
+            <br/>
+            <div class="input-group">
+                <span class="input-group-addon">Postcode</span>
+                <input type="text" class="form-control" ng-model="advertiser.post_code" ng-disabled="!editMode">
+            </div>
+            <br/>
+            <div class="input-group">
+                <span class="input-group-addon">Tel. no.</span>
+                <input type="text" class="form-control" ng-model="advertiser.tel" ng-disabled="!editMode">
+            </div>
+            <br/>
+            <hr/>
+            <div class="pull-left">
+                <button type="button" class="btn btn-s btn-danger" ng-show="!editMode" ng-click="deleteAdvertiser()">delete</button>
+                <button type="button" class="btn btn-s" ng-show="!editMode" ng-click="toggleEdit()">edit</button>
+                <button type="button" class="btn btn-s" ng-show="editMode" ng-click="toggleEdit()">cancel</button>
+                <button type="button" class="btn btn-s btn-primary" ng-show="editMode" ng-click="saveChanges()">Save</button>
+            </div>
+            <div class="pull-right">
+                <button type="button" class="btn btn-s btn-primary" ng-show="!editMode" ng-click="newPixel()">new pixel</button>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="col-sm-6">
+            <h4>Pixels:</h4>
+            <br/>
+            <div class="alert alert-info" ng-show="pixels.length == 0">
+                No pixels
+            </div>
+            <ul class="list-group" ng-if="pixels.length > 0">
+                <li class="list-group-item col-l-6" ng-repeat="pixel in pixels">
+                    <a ui-sref="pixelDetails({ adId: advertiser.id, pixId: pixel.id })">{{pixel.name}}</a>
+                </li>
+            </ul>
+        </div>
+
+</div>

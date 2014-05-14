@@ -1,0 +1,25 @@
+/*bootstrap ui dialog fix to work with Bootstrap 3.x */
+.modal {
+    display: block;
+    height: 0;
+    overflow: visible;
+}
+.center {
+    text-align: center;
+}
+.input-group .input-group-addon{
+    min-width:85px;
+}
+.form-control:disabled{
+    background-color:#FAFAFA;
+    cursor:default;
+}
+.thumbnail {
+    min-height: 140px;
+}
+.thumbnail .caption{
+    text-align: center;
+}
+h4.custom-margin{
+    margin-right:15px;
+}

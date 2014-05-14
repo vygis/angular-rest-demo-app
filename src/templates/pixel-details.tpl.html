@@ -1,0 +1,16 @@
+<div class="row" ng-controller="pixelDetailsCtrl">
+    <ol class="breadcrumb">
+        <li><a href="#">Advertisers</a></li>
+        <li><a ui-sref="advertiserDetails({ id: pixel.advertiser_id })">{{pixel.advertiser_id}}</a></li>
+        <li class="active">{{pixel.name}}</li>
+    </ol>
+    <h4>pixel {{pixel.id}}</h4>
+    <div class="alert alert-info" ng-show="fires === null">
+        No pixels fires
+    </div>
+    <ul class="list-group" ng-if="fires.length > 0">
+        <li class="list-group-item col-l-6" ng-repeat="fire in fires">
+            <p>{{fire.fires}} hits on {{formatDate(fire.date)}}</p>
+        </li>
+    </ul>
+</div>
