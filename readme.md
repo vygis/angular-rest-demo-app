@@ -3,17 +3,17 @@
 ##Data model
 
 3 entities are available in the API:
-*Advertisers
-*Pixels
-*Pixel Fires
+* Advertisers
+* Pixels
+* Pixel Fires
 
 Advertisers contain pixels, while pixels contain pixel fires.
 
 ##Stack info:
 
-*Backend - Python server running on SQLite
-*Front end - AngularJS with AngularUI router, Twitter Bootstrap for presentation
-*Workflow - Grunt.js
+* Backend: Python server running on SQLite
+* Front end: AngularJS with AngularUI router, Twitter Bootstrap for presentation
+* Workflow: Grunt.js
 
 ##Instructions
 
