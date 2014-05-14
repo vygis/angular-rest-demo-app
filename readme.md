@@ -1,4 +1,4 @@
-AngularJS $ RESTful API Demo App
+#AngularJS $ RESTful API Demo App
 
 ##Data model
 
@@ -11,9 +11,9 @@ Advertisers contain pixels, while pixels contain pixel fires.
 
 ##Stack info:
 
-*Back end: Python server running on SQLite
-*Front end: AngularJS with AngularUI router, Twitter Bootstrap for presentation
-*Workflow: Grunt.js
+*Backend - Python server running on SQLite
+*Front end - AngularJS with AngularUI router, Twitter Bootstrap for presentation
+*Workflow - Grunt.js
 
 ##Instructions
 
